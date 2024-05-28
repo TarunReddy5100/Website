@@ -1,0 +1,1 @@
+sass --watch "C:\Users\MR Pure\Dropbox\Matiour\tecz\assets\scss\main.scss":"C:\Users\MR Pure\Dropbox\Matiour\tecz\assets\css\main.css"
