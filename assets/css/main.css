@@ -3915,6 +3915,7 @@ div.demo img {
 }
 .tp-section-3 .tp-section-sub-title {
   padding-left: 30px;
+  letter-spacing: 0.1px;
 }
 .tp-section-3 .tp-section-sub-title::before {
   height: 2px;
