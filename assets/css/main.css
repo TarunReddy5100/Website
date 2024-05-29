@@ -12652,6 +12652,21 @@ blockquote cite::before {
     width: 300px;
   }
 }
+@media only screen and (min-width: 1110px) and (max-width: 1151px){
+  .tp-feature-item-2 {
+   width: 270px;
+  }
+}
+@media only screen and (min-width: 1151px) and (max-width: 1310px){
+   .tp-feature-item-2 {
+    width: 280px;
+   }
+}
+@media only screen and (min-width: 1311px) and (max-width: 1500px){
+  .tp-feature-item-2 {
+   width: 320px;
+  }
+}
 .tp-feature-item:hover {
   background-color: var(--tp-theme-secondary);
   transform: translateY(-20px);
