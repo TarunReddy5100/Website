@@ -16477,6 +16477,7 @@ blockquote cite::before {
   .tp-slider-2-wrap {
     padding-top: 120px;
     padding-bottom: 130px;
+    height: 480px !important;
   }
 }
 .tp-slider-2-item {
