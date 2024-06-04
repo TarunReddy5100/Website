@@ -133,3 +133,49 @@
                   </div>
                </div>
             </div>
+
+
+
+
+
+
+
+            <!-- Modal -->
+ <div id="successModal" class="modal">
+   <div class="modal-content">
+       <div class="tick-icon">&#10003;</div>
+       <div class="message">Your message has been sent successfully.</div>
+       <button class="ok-btn" onclick="closeModal()">OK</button>
+   </div>
+</div>
+
+
+<script>
+   // Get the modal
+   var modal = document.getElementById("successModal");
+
+   // Close modal function
+   function closeModal() {
+      modal.style.display = "none";
+   }
+
+   // Handle form submission with AJAX
+   document.getElementById("contactForm").addEventListener("submit", function(event) {
+       event.preventDefault();
+
+       var formData = new FormData(this);
+
+       var xhr = new XMLHttpRequest();
+       xhr.open("POST", "send_email.php", true);
+       xhr.onreadystatechange = function() {
+           if (xhr.readyState == 4 && xhr.status == 200) {
+               if (xhr.responseText.trim() == 'Your message has been sent successfully.') {
+                  modal.style.display = "flex";
+               } else {
+                   alert(xhr.responseText);
+               }
+           }
+       };
+       xhr.send(formData);
+   });
+</script>  

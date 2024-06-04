@@ -472,7 +472,7 @@
                            <span class="tp-section-sub-title"><i class="flaticon-edit"></i> Let’s Talk With Us</span>
                            <h4 class="tp-section-title">Grow Your Business With Our Expertise</h4>
                            <div class="tp-section-title-wrapper">
-                              <p>System is a term used to refer to an organized collection symbols and processes that may be used to operate on such symbols.</p>
+                              <p>Get in touch with us for tailored business solutions and expert advice. We're here to help you grow and succeed.</p>
                            </div>
                         </div>
                         <div class="tp-contact-main-thumb mb-40 w-img">
@@ -503,7 +503,7 @@
                   </div> 
                   <div class="offset-xl-1 col-xl-6 col-lg-6">
                      <div class="tp-contact-details-form mb-40">
-                        <form method="post" action="send_email.php">
+                        <form id="contactForm" method="post">
                            <div class="row">
                               <div class="col-lg-6">
                                  <div class="tp-contact-details-form-input mb-20">
@@ -754,6 +754,53 @@
       </footer>
       <!-- footer-area-end -->
       
+      <!-- Modal -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Your message has been sent successfully.</p>
+      </div>
+  </div>
+
+  <script>
+      // Get the modal
+      var modal = document.getElementById("successModal");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+
+      // Handle form submission with AJAX
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+
+          var formData = new FormData(this);
+
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "send_email.php", true);
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState == 4 && xhr.status == 200) {
+                  if (xhr.responseText.trim() == 'Your message has been sent successfully.') {
+                      modal.style.display = "block";
+                  } else {
+                      alert(xhr.responseText);
+                  }
+              }
+          };
+          xhr.send(formData);
+      });
+  </script>
 
       <!-- JS here -->
       <script src="assets/js/vendor/jquery.js"></script>

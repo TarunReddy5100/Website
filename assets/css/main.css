@@ -6552,12 +6552,12 @@ a.ui-button:active {
   opacity: 0;
 }
 .main-menu ul li .tp-submenu > li:hover > a,
-.main-menu ul li .tp-submenu > li.active > a{
+.main-menu ul li .tp-submenu > li.active > a {
   color: var(--tp-theme-primary);
   padding-left: 43px;
 }
 .main-menu ul li.active > a {
-  color: var(--tp-theme-primary); 
+  color: var(--tp-theme-primary);
 }
 .main-menu ul li .tp-submenu > li:hover > a::after,
 .main-menu ul li .tp-submenu > li.active > a::after {
@@ -10905,8 +10905,6 @@ blockquote cite::before {
   .tp-provide-bg {
     padding-left: 15px;
     padding-right: 15px;
-    
-
   }
 }
 .tp-provide-width {
@@ -11374,7 +11372,6 @@ blockquote cite::before {
 @media (max-width: 767px) {
   .tp-about-4 .tp-about-info-item {
     flex-wrap: wrap;
-  
   }
 }
 .tp-about-4 .tp-about-info-item:hover {
@@ -12654,19 +12651,19 @@ blockquote cite::before {
     width: 300px;
   }
 }
-@media only screen and (min-width: 1110px) and (max-width: 1151px){
+@media only screen and (min-width: 1110px) and (max-width: 1151px) {
   .tp-feature-item-2 {
-   width: 270px;
+    width: 270px;
   }
 }
-@media only screen and (min-width: 1151px) and (max-width: 1310px){
-   .tp-feature-item-2 {
-    width: 280px;
-   }
-}
-@media only screen and (min-width: 1311px) and (max-width: 1500px){
+@media only screen and (min-width: 1151px) and (max-width: 1310px) {
   .tp-feature-item-2 {
-   width: 320px;
+    width: 280px;
+  }
+}
+@media only screen and (min-width: 1311px) and (max-width: 1500px) {
+  .tp-feature-item-2 {
+    width: 320px;
   }
 }
 .tp-feature-item:hover {
@@ -16615,6 +16612,12 @@ blockquote cite::before {
 }
 .tp-slider-2-thumb {
   margin-left: -30px;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .tp-slider-2-thumb {
+    margin-right: -100%;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px),
   (max-width: 767px) {
@@ -18619,151 +18622,63 @@ ul {
 /* End Careers */
 
 /* Start job details pages */
-.main_tit{
+.main_tit {
   font-size: 25px;
   font-weight: 500px;
 }
-.breadcrumb-nav{
+.breadcrumb-nav {
   position: relative;
 }
-.breadcrumb-2{
-position: absolute;
-left: 39%;
-font-weight: 300px;
-font-size: 18px;
+.breadcrumb-2 {
+  position: absolute;
+  left: 39%;
+  font-weight: 300px;
+  font-size: 18px;
 }
-.job-text{
+.job-text {
   font-size: 16px;
 }
-.job-items{
+.job-items {
   font-size: 14px;
 }
 
-
 @media (max-width: 767px) {
-  .breadcrumb-nav{
+  .breadcrumb-nav {
     position: relative;
   }
-  .breadcrumb-2{
+  .breadcrumb-2 {
     position: absolute;
     left: 20%;
     font-weight: 300px;
-    font-size:14px;
-    }
-    .tab-buttons{
-      font-size: 5px !important;
-      width: 100%;
-      height: 10px;
-    }
-    .tab-buttons-items{
-      font-size: 10px;
-      padding-bottom: 2px;
-      font-weight: 500px;
-      margin: 4px;
-     
-    }
-    .news-letter-input{
-      width: 100% !important;
-    }
-    .Subscibe-button{
-      margin-top: 10px;
-    }
-    .apply-for-job-cards{
-      margin: 1px auto;
-    }
+    font-size: 14px;
+  }
+  .tab-buttons {
+    font-size: 5px !important;
+    width: 100%;
+    height: 10px;
+  }
+  .tab-buttons-items {
+    font-size: 10px;
+    padding-bottom: 2px;
+    font-weight: 500px;
+    margin: 4px;
+  }
+  .news-letter-input {
+    width: 100% !important;
+  }
+  .Subscibe-button {
+    margin-top: 10px;
+  }
+  .apply-for-job-cards {
+    margin: 1px auto;
+  }
 }
 /* End job details pages */
 
-/* Start Model box form */ 
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  padding-bottom: 70px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 50px;
-  border: 1px solid #888;
-  width: 40%;
-}
-/* The Close Button */
-.close {
-  /* display: flex; */
-  color: #aaaaaa;
-  float: left;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  
-}
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-  /* display: flex; */
-}
-
-@media (max-width: 767px) {
-  /* Start Model box form */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  padding-bottom: 70px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 50px;
-  border: 1px solid #888;
-  width: 90%;
-}
-/* The Close Button */
-.close {
-  /* display: flex; */
-  color: #aaaaaa;
-  float: left;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  
-}
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-  /* display: flex; */
-}
-
-}
-
-/* End Model box form */
 /*# sourceMappingURL=main.css.map */
 
 /* Start Services Cards */
-.tp-services-cards{
+.tp-services-cards {
   width: 350px;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -18771,10 +18686,10 @@ font-size: 18px;
   border-radius: 10px;
   box-shadow: 0 0 10px #ccc;
 }
-.tp-services-cards:hover{
+.tp-services-cards:hover {
   border: 1px #ff1826 solid;
 }
-.tp-services-card-logo{
+.tp-services-card-logo {
   float: inline-start;
   width: 60px;
   font-size: 60px;
@@ -18797,12 +18712,12 @@ font-size: 18px;
   top: 79px;
   right: 71px;
 }
-.tp-feature-item:hover .cls-1{
+.tp-feature-item:hover .cls-1 {
   fill: #fff;
 }
 /* End Services cards icons style */
 /* Start Our Business lines */
-.tp-feature-svg-icons{
+.tp-feature-svg-icons {
   height: 65px;
   width: 65px;
   position: relative;
@@ -18811,85 +18726,84 @@ font-size: 18px;
   left: 0px;
 }
 
-.tp-provide-wrap:hover .cls-1{
-  fill: #fff
+.tp-provide-wrap:hover .cls-1 {
+  fill: #fff;
 }
 
 /* End Our Buisiness lines */
 
-
-.modal-confirm {		
-	color: #636363;
-	width: 325px;
-	font-size: 14px;
+/* Modal styles */
+/* .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.modal-confirm .modal-content {
-	padding: 20px;
-	border-radius: 5px;
-	border: none;
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
 }
-.modal-confirm .modal-header {
-	border-bottom: none;   
-	position: relative;
+.modal-content .tick-icon {
+  font-size: 50px;
+  color: green;
+  display: block;
+  margin: 0 auto;
 }
-.modal-confirm h4 {
-	text-align: center;
-	font-size: 26px;
-	margin: 30px 0 -15px;
+.modal-content .message {
+  margin: 20px 0;
+  font-size: 18px;
 }
-.modal-confirm .form-control, .modal-confirm .btn {
-	min-height: 40px;
-	border-radius: 3px; 
+.modal-content .ok-btn {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
-.modal-confirm .close {
-	position: absolute;
-	top: -5px;
-	right: -5px;
-}	
-.modal-confirm .modal-footer {
-	border: none;
-	text-align: center;
-	border-radius: 5px;
-	font-size: 13px;
-}	
-.modal-confirm .icon-box {
-	color: #fff;		
-	position: absolute;
-	margin: 0 auto;
-	left: 0;
-	right: 0;
-	top: -70px;
-	width: 95px;
-	height: 95px;
-	border-radius: 50%;
-	z-index: 9;
-	background: #82ce34;
-	padding: 15px;
-	text-align: center;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+ */
+ .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
 }
-.modal-confirm .icon-box i {
-	font-size: 58px;
-	position: relative;
-	top: 3px;
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
-.modal-confirm.modal-dialog {
-	margin-top: 80px;
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
-.modal-confirm .btn {
-	color: #fff;
-	border-radius: 4px;
-	background: #82ce34;
-	text-decoration: none;
-	transition: all 0.4s;
-	line-height: normal;
-	border: none;
-}
-.modal-confirm .btn:hover, .modal-confirm .btn:focus {
-	background: #6fb32b;
-	outline: none;
-}
-.trigger-btn {
-	display: inline-block;
-	margin: 100px auto;
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
