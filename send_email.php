@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = 'tarunreddy94786@gmail.com'; // Your email address
+    $to = 'info@azagava.com'; // Your email address
     $subject = 'Contact Form Submission';
 
     // Collect and sanitize form data

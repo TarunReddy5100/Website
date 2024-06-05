@@ -241,7 +241,7 @@
                               <!-- <i class="fa-solid fa-phone-flip"></i> -->
                            </div>
                            <div class="tp-header-4-contact-content">
-                              <span>Call Anytime</span>
+                              <span>Reach Us On</span>
                               <a href="tel:+919052228881">+91 90522 28881</a>
                            </div>
                         </div>
@@ -299,7 +299,7 @@
                      <i class="fa-solid fa-phone"></i>
                   </div>
                   <div class="tp-header-4-contact-content">
-                     <span>Call Anytime</span>
+                     <span>Reach Us On</span>
                      <a href="tel:+919052228881">+91 90522 28881</a>
                   </div>
                </div>
@@ -507,43 +507,43 @@
                            <div class="row">
                               <div class="col-lg-6">
                                  <div class="tp-contact-details-form-input mb-20">
-                                    <input id="fname" name="fname" type="text" placeholder="First Name" required/>
+                                    <input id="fname" name="fname" type="text" placeholder="First Name" pattern="^[a-zA-Z \-']+$" required/>
                                     <span><i class="fa-light fa-user"></i></span>
                                  </div>
                               </div>
                               <div class="col-lg-6">
                                  <div class="tp-contact-details-form-input mb-20">
-                                    <input id="lname" name="lname" type="text" placeholder="Last Name" required/>
+                                    <input id="lname" name="lname" type="text" placeholder="Last Name" pattern="^[a-zA-Z \-']+$" required/>
                                     <span><i class="fa-light fa-user"></i></span>
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="tp-contact-details-form-input mb-20">
-                                    <input id="email" name="email" type="email" placeholder="Email Address" required/>
+                                    <input id="email" name="email" type="email" placeholder="Email Address" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required/>
                                     <span><i class="fa-light fa-envelope"></i></span>
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="tp-contact-details-form-input mb-20">
-                                    <input id="phoneNum" name="phoneNum" type="tel" placeholder="Phone Number" required/>
+                                    <input id="phoneNum" name="phoneNum" type="tel" placeholder="Phone Number" pattern="[0-9]{1}[0-9]{9}" required/>
                                     <span><i class="fa-light fa-phone"></i></span>
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="tp-contact-details-form-input mb-20">
-                                    <input id="companyName" name="companyName" type="text" placeholder="Company Name" required/>
+                                    <input id="companyName" name="companyName" type="text" placeholder="Company Name" pattern="^[a-zA-Z \-']+$"  required/>
                                     <span><i class="fa-light fa-user"></i></span>
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="tp-contact-details-form-input mb-20">
-                                    <input id="sub" name="sub" type="text" placeholder="Your Subject" required/>
+                                    <input id="sub" name="sub" type="text" placeholder="Your Subject" pattern="^[a-zA-Z \-']+$" required/>
                                     <span><i class="fa-sharp fa-light fa-circle-info"></i></span>
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="tp-contact-details-form-input mb-20">
-                                    <textarea id="message" name="message" placeholder="Write Your Message" required></textarea>
+                                    <textarea id="message" name="message" placeholder="Write Your Message"  pattern="^[a-zA-Z \-']+$" required></textarea>
                                     <span><i class="fa-light fa-pen"></i></span>
                                  </div>
                               </div>
@@ -755,50 +755,41 @@
       <!-- footer-area-end -->
       
       <!-- Modal -->
-    <div id="successModal" class="modal">
-      <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Your message has been sent successfully.</p>
+      <div id="successModal" class="modal">
+         <div class="modal-content">
+             <div class="tick-icon">&#10003;</div>
+             <div class="message">Your message has been sent successfully.</div>
+             <button class="ok-btn" onclick="closeModal()">OK</button>
+         </div>
       </div>
-  </div>
 
   <script>
       // Get the modal
       var modal = document.getElementById("successModal");
 
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-          modal.style.display = "none";
-      }
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
+      // Close modal function
+      function closeModal() {
+         modal.style.display = "none";
       }
 
       // Handle form submission with AJAX
       document.getElementById("contactForm").addEventListener("submit", function(event) {
-          event.preventDefault();
+         event.preventDefault();
 
-          var formData = new FormData(this);
+         var formData = new FormData(this);
 
-          var xhr = new XMLHttpRequest();
-          xhr.open("POST", "send_email.php", true);
-          xhr.onreadystatechange = function() {
-              if (xhr.readyState == 4 && xhr.status == 200) {
+         var xhr = new XMLHttpRequest();
+         xhr.open("POST", "send_email.php", true);
+         xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
                   if (xhr.responseText.trim() == 'Your message has been sent successfully.') {
-                      modal.style.display = "block";
+                     modal.style.display = "block";
                   } else {
-                      alert(xhr.responseText);
+                     alert(xhr.responseText);
                   }
-              }
-          };
-          xhr.send(formData);
+            }
+         };
+         xhr.send(formData);
       });
   </script>
 
