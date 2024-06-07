@@ -798,7 +798,29 @@
 		autoplay: {
 			delay: 5000,
 		},
-		pagination: {
+		navigation: {
+			nextEl: '.slider-button-next',
+			prevEl: '.slider-button-prev',
+		},
+		rtl: rtl_setting,
+		breakpoints: {
+			'1200': {
+				slidesPerView: 1,
+			},
+			'992': {
+				slidesPerView: 1,
+			},
+			'768': {
+				slidesPerView: 1,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+		},
+		/* pagination: {
 			el: ".tp-slider-2-pagination",
 			clickable: true,
 		},
@@ -819,7 +841,7 @@
 			'0': {
 				slidesPerView: 1,
 			},
-		},
+		}, */
 	});
 
 
