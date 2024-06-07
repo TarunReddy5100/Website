@@ -16240,6 +16240,11 @@ blockquote cite::before {
   z-index: 9;
   right: 18%;
 }
+@media only screen and (min-width: 1441px) and (max-width: 1824px) {
+  .slider-buttons {
+    right: 30px;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1440px) {
   .slider-buttons {
     right: 30px;
