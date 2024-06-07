@@ -6491,7 +6491,7 @@ a.ui-button:active {
 .main-menu ul li .tp-submenu > li {
   display: block;
   width: 100%;
-  margin: 0px 0px;
+  margin: 10px 0px;
   padding: 0;
   -webkit-transform: translateY(-10px);
   -moz-transform: translateY(-10px);
@@ -6515,10 +6515,10 @@ a.ui-button:active {
   color: var(--tp-common-black);
   font-weight: 400;
   font-size: 14px;
-  padding: 10px 25px;
-  /* padding-bottom: 0px; */
+  padding: 0 25px;
+  padding-bottom: 0px;
   padding-left: 25px;
-  /* padding-bottom: 1px; */
+  padding-bottom: 1px;
   width: 100%;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -6587,6 +6587,7 @@ a.ui-button:active {
   opacity: 1;
   transform: scale(1);
 }
+
 .main-menu ul li .has-homemenu {
   width: 100%;
   padding: 30px 30px 10px 30px;

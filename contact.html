@@ -793,12 +793,12 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     .then(responseText => {
         if (responseText.trim() == 'Your message has been sent successfully.') {
             modal.style.display = "block";
-            document.getElementById("contactForm").reset();// Reset the form
+            document.getElementById("contactForm").reset();
             // Automatically close the modal after 5 seconds
             setTimeout(() => {
                 closeModal();
-                document.getElementById("contactForm").reset(); 
-            }, 5000);
+                document.getElementById("contactForm").reset(); // Reset the form
+            }, 3000);
         } else {
             alert(responseText);
         }
