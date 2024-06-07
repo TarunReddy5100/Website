@@ -16247,7 +16247,7 @@ blockquote cite::before {
 }
 @media only screen and (min-width: 769px) and (max-width: 991px) {
   .slider-buttons {
-    right: 380px;
+    right: 48%;
   }
 }
 @media (max-width: 768px) {
