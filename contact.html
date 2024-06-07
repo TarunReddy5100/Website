@@ -764,33 +764,52 @@
       </div>
 
   <script>
-      // Get the modal
-      var modal = document.getElementById("successModal");
+    // Get the modal
+var modal = document.getElementById("successModal");
 
-      // Close modal function
-      function closeModal() {
-         modal.style.display = "none";
-      }
+// Close modal function
+function closeModal() {
+    modal.style.display = "none";
+}
 
-      // Handle form submission with AJAX
-      document.getElementById("contactForm").addEventListener("submit", function(event) {
-         event.preventDefault();
+// Close the modal if the user clicks outside of the modal content
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
 
-         var formData = new FormData(this);
+// Handle form submission with Fetch API
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-         var xhr = new XMLHttpRequest();
-         xhr.open("POST", "send_email.php", true);
-         xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                  if (xhr.responseText.trim() == 'Your message has been sent successfully.') {
-                     modal.style.display = "block";
-                  } else {
-                     alert(xhr.responseText);
-                  }
-            }
-         };
-         xhr.send(formData);
-      });
+    var formData = new FormData(this);
+
+    fetch("send_email.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(responseText => {
+        if (responseText.trim() == 'Your message has been sent successfully.') {
+            modal.style.display = "block";
+            document.getElementById("contactForm").reset();// Reset the form
+            // Automatically close the modal after 5 seconds
+            setTimeout(() => {
+                closeModal();
+                document.getElementById("contactForm").reset(); 
+            }, 5000);
+        } else {
+            alert(responseText);
+        }
+    })
+    .catch(error => {
+        alert("An error occurred while sending your message. Please try again.");
+        console.error('Error:', error);
+    });
+});
+
+
   </script>
 
       <!-- JS here -->

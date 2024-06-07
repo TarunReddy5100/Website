@@ -102,6 +102,7 @@
 
 		});
 	}
+	
 
 	////////////////////////////////////////////////////
 	// 03. Offcanvas Js
@@ -192,7 +193,7 @@
 	// 10. Sticky Header Js
 	windowOn.on('scroll', function () {
 		var scroll = $(window).scrollTop();
-		if (scroll < 100) {
+		if (scroll < 0.0001) {
 			$("#header-sticky").removeClass("header-sticky");
 		} else {
 			$("#header-sticky").addClass("header-sticky");
