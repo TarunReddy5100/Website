@@ -16230,47 +16230,6 @@ blockquote cite::before {
 /*----------------------------------------*/
 /*  7.3 Slider css
 /*----------------------------------------*/
-.slider-buttons{
-  position: absolute;
-  bottom: 40px;
-  width: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 9;
-  right: 18%;
-}
-@media only screen and (min-width: 1441px) and (max-width: 1824px) {
-  .slider-buttons {
-    right: 30px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1440px) {
-  .slider-buttons {
-    right: 30px;
-  }
-}
-@media only screen and (min-width: 769px) and (max-width: 991px) {
-  .slider-buttons {
-    right: 48%;
-  }
-}
-@media (max-width: 768px) {
-  .slider-buttons {
-    right: 120px;
-    display: none;
-  }
-}
-.slider-button-next, .slider-button-prev {
-  color: var(--tp-grey-1); /* Customize the arrow color */
-  background-color: var(--tp-theme-3);
-  border-radius: 50%;
-  padding: 10px;
-  font-size: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .tp-slider-wrap {
   position: relative;
   z-index: 1;
